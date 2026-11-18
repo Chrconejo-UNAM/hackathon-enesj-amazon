@@ -16,3 +16,7 @@ __pycache__/
 .aws/
 
 setup-log.txt
+
+# Dataset del evento: se queda local (el .zip de entrega lo incluye igual)
+data/*
+!data/README-dataset.md
