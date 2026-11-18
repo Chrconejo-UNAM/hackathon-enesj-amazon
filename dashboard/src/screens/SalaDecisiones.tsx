@@ -9,6 +9,7 @@ import { t, tx } from '../i18n'
 import { useAppState } from '../state'
 import type { Cobertura, FiltrosSala, Zona } from '../types'
 import { useApi } from '../useApi'
+import EnVivo from './EnVivo'
 import Evidencia from './Evidencia'
 
 const ZONAS = ['todas', 'propia', 'medio', 'roja']
@@ -108,7 +109,7 @@ export default function SalaDecisiones() {
         )
       })()}
 
-      {/* <div id="en-vivo-slot" /> */}
+      <EnVivo />
     </section>
   )
 }

@@ -2,6 +2,7 @@ import { useRef, useState, type KeyboardEvent } from 'react'
 import Inicio from './screens/Inicio'
 import SalaDecisiones from './screens/SalaDecisiones'
 import TableroRegret from './screens/TableroRegret'
+import PanelIA from './panel/PanelIA'
 import { useAppState } from './state'
 import { t } from './i18n'
 
@@ -82,7 +83,9 @@ export default function App() {
             <Active />
           </main>
         </div>
-        <aside id="panel-ia" className="lg:w-80 lg:shrink-0 lg:border-l" />
+        <aside id="panel-ia" className="lg:w-80 lg:shrink-0 lg:border-l">
+          <PanelIA />
+        </aside>
       </div>
     </div>
   )
