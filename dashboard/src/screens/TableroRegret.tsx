@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import Cargando from '../components/Cargando'
 import ErrorEstado from '../components/ErrorEstado'
 import Semaforo from '../components/Semaforo'
@@ -10,12 +10,17 @@ import { useApi } from '../useApi'
 import type { Zona } from '../types'
 
 type Filtro = Zona | 'todas'
-const FILTROS: Filtro[] = ['todas', 'propia', 'medio', 'roja']
+const FILTROS: Filtro[] = [
+  'todas',
+  'corta_izquierda', 'corta_centro', 'corta_derecha',
+  'media_izquierda', 'media_centro', 'media_derecha',
+  'profunda_izquierda', 'profunda_centro', 'profunda_derecha',
+]
 
 const TXT = {
   es: {
-    sinConcluyente: 'Aún no hay un equipo concluyente',
-    masArrepiente: 'es el que más se arrepiente',
+    sinConcluyente: 'AÃºn no hay un equipo concluyente',
+    masArrepiente: 'es el que mÃ¡s se arrepiente',
     yds: 'yds',
     ic: 'IC95 %',
     ranking: 'Ranking de Regret por equipo',
@@ -80,7 +85,7 @@ export default function TableroRegret() {
                 </div>
                 <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-800">
                   <span>
-                    {x.ic}: {e.ic95[0].toFixed(2)} – {e.ic95[1].toFixed(2)}
+                    {x.ic}: {e.ic95[0].toFixed(2)} â€“ {e.ic95[1].toFixed(2)}
                   </span>
                   <span>
                     {t(lang, 'n')}={e.n}
@@ -96,3 +101,4 @@ export default function TableroRegret() {
     </section>
   )
 }
+
