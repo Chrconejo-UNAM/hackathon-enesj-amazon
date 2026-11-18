@@ -4,7 +4,7 @@ import type {
   Explicacion, Jugada, Partido, Recomendacion, Resumen, Zona,
 } from './types'
 import {
-  acumuladoMock, alertas, chatMock, equiposMock, escenario, evidencia, evidenciaVacia, explicacionMock, jugadaMock,
+  acumuladoMock, alertasMock, chatMock, equiposMock, escenario, evidencia, evidenciaVacia, explicacionMock, jugadaMock,
   partidos, recomendacionMock, resumen, resumenAmarillo,
 } from './mocks'
 
@@ -74,7 +74,7 @@ export const api = {
 
   alertas: (gameId: number, hasta: number): Promise<Alerta[]> =>
     usaMock('alertas')
-      ? espera(hasta <= 0 ? [] : alertas.slice(0, Math.min(3, Math.ceil(hasta / 4))))
+      ? espera(alertasMock(gameId, hasta))
       : pedir(`api/partido/${gameId}/alertas${qs({ hasta })}`),
 
   recomendacion: (f: { down: number; yardsToGo: number; zona: Zona; cobertura: Cobertura }): Promise<Recomendacion> =>

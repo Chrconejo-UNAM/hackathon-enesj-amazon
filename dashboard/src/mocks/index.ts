@@ -14,7 +14,7 @@ export const escenario = (): string =>
   typeof window === 'undefined' ? '' : new URLSearchParams(window.location.search).get('mock') ?? ''
 
 export const resumenAmarillo: Resumen = {
-  titulo: { es: 'Los QB dejan 1.3 yardas de separaci�n sobre la mesa (con reservas)', en: 'QBs leave 1.3 yards of separation on the table (with caveats)' },
+  titulo: { es: 'Los QB dejan 1.3 yardas de separación sobre la mesa (con reservas)', en: 'QBs leave 1.3 yards of separation on the table (with caveats)' },
   linea: { es: 'Muestra reducida de 2021', en: 'Small 2021 sample' },
   regret_liga: est(1.3, 60, 0.9),
   calidad_datos: { pct_objetivo_inferido: 18.5 },
@@ -107,6 +107,21 @@ export const alertas: Alerta[] = [
   { id: 'a3', nivel: 'critica', titulo: { es: 'Regret reciente alto', en: 'High recent Regret' },
     texto: { es: 'Las últimas jugadas superan 3 yardas de Regret.', en: 'The last plays exceed 3 yards of Regret.' }, estimacion: est(3.2, 12, 1.5) },
 ]
+
+/** Alertas calculadas solo con jugadas 1..hasta; aparecen según n. Con n<30 la estimación es roja. */
+export function alertasMock(gameId: number, hasta: number): Alerta[] {
+  const h = Math.max(0, Math.min(12, hasta))
+  if (h < 1) return []
+  const ac = acumuladoMock(gameId, h)
+  const peor = [...ac.por_lado].sort((a, b) => b.estimacion.valor - a.estimacion.valor)[0]
+  const out: Alerta[] = [
+    { id: 'a1', nivel: 'info', titulo: alertas[0].titulo, texto: alertas[0].texto, estimacion: ac.regret_medio },
+  ]
+  if (h >= 4 && peor) out.push({ id: 'a2', nivel: 'atencion', titulo: { es: `Lado ${peor.lado} con más Regret`, en: `${peor.lado} side has most Regret` },
+    texto: alertas[1].texto, estimacion: peor.estimacion })
+  if (h >= 8) out.push({ id: 'a3', nivel: 'critica', titulo: alertas[2].titulo, texto: alertas[2].texto, estimacion: est(ac.regret_medio.valor, h, 1.5) })
+  return out
+}
 
 const comp = (es: string, en: string, e: Estimacion): Comparable => ({ etiqueta: { es, en }, estimacion: e })
 
