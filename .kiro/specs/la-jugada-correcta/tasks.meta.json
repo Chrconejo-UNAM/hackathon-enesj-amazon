@@ -1,0 +1,169 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1. [FRONTEND] Esqueleto del dashboard (paralelo a 7)": [
+      {
+        "executionId": "c8853e69-9714-45a9-9d23-e1a5aee6604d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795025743770
+      }
+    ],
+    "1.1 [FRONTEND] Verificar lo ya creado: `types.ts`, `api.ts`, `mocks/index.ts`, `useApi.ts`, `vite-env.d.ts`, `vite.config.ts` y Tailwind 3 (en paralelo con 1.2)": [
+      {
+        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795026659255
+      },
+      {
+        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795026768677
+      }
+    ],
+    "1.4 [FRONTEND] Gráfica Recharts de barras `n_pases` por partido en `App.tsx` usando `useApi` + `api.ts` (`GET api/partidos`) con Cargando, Vacío y Error": [
+      {
+        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795026768963
+      },
+      {
+        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027041734
+      }
+    ],
+    "3.3 [FRONTEND] Mocks de las pantallas, en `mocks/` (ver sección \"Mocks para el frontend\"): `resumen`, `recomendacion`, `regret_equipos`, `evidencia`, `explicacion`, con interruptor por endpoint": [
+      {
+        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027042051
+      },
+      {
+        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027259620
+      }
+    ],
+    "3.4 [FRONTEND] Componentes base: `Semaforo` (ícono + texto \"Confiable / Con reservas / No concluyente\"), `EstimacionBadge` (valor, IC95 %, n y \"aún no es concluyente\" si n<30), `TarjetaResumen`, `Cargando` (`aria-busy`), `Vacio`, `ErrorEstado` (con Reintentar)": [
+      {
+        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027042723
+      },
+      {
+        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027262062
+      }
+    ],
+    "3.5 [FRONTEND] `state.tsx` (contexto en memoria: idioma, banda lateral, partido, n actual, panel IA; sin `localStorage`) y navegación de 3 pestañas en `App.tsx` (Inicio, Sala de Decisiones, Tablero de Arrepentimiento)": [
+      {
+        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027262398
+      },
+      {
+        "executionId": "c064f045-ce44-4f77-84f4-64a01e085782",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027622692
+      },
+      {
+        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027852533
+      }
+    ],
+    "4.6 [FRONTEND] Mocks del modo en vivo: `partidos`, `jugada` (12 jugadas de un partido), `acumulado` por `hasta` y `alertas`": [
+      {
+        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027269792
+      }
+    ],
+    "5.1 [FRONTEND] `i18n.ts` (diccionario ES/EN, helper `t()`, respaldo ES si falta clave) y botón único ES/EN; textos del backend por campo `es`/`en`": [
+      {
+        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027270207
+      }
+    ],
+    "3.6 [FRONTEND] Pantalla Inicio (`screens/Inicio.tsx`): `titulo` como título de pantalla, `TarjetaResumen` con `regret_liga` y \"2021 sem. 1-8\", `pct_objetivo_inferido`, estados Cargando/Error/Reintentar mostrando `detail`": [
+      {
+        "executionId": "e794c1a6-37e1-47b4-a50b-b4e7f4097d68",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027458008
+      },
+      {
+        "executionId": "c064f045-ce44-4f77-84f4-64a01e085782",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027624229
+      },
+      {
+        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027960720
+      }
+    ],
+    "3.7 [FRONTEND] Sala de Decisiones (`screens/SalaDecisiones.tsx`): controles down 1-4, yardsToGo 1-20, zona, cobertura; `accion` como título, `porque`, Semáforo y EstimacionBadge; llamadas a `api/recomendacion` al cambiar un control": [
+      {
+        "executionId": "e794c1a6-37e1-47b4-a50b-b4e7f4097d68",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027458317
+      },
+      {
+        "executionId": "c064f045-ce44-4f77-84f4-64a01e085782",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027625627
+      },
+      {
+        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027961690
+      }
+    ],
+    "3.9 [FRONTEND] Tablero de Arrepentimiento (`screens/TableroRegret.tsx`): ranking descendente, filtro de zona (`todas`, `propia`, `medio`, `roja`), filas con equipo, valor, IC95 %, n y Semáforo, marca de no concluyente, título = equipo con mayor Regret concluyente": [
+      {
+        "executionId": "e794c1a6-37e1-47b4-a50b-b4e7f4097d68",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027459511
+      },
+      {
+        "executionId": "c064f045-ce44-4f77-84f4-64a01e085782",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027627496
+      },
+      {
+        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027854493
+      },
+      {
+        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027959027
+      }
+    ],
+    "7.2 [FRONTEND + BACKEND] `README.md` en la raíz: cómo correr dev (Vite + Uvicorn) y build, variables `.env` (sin llaves), supuestos y limitaciones (proxy de separación, receptor inferido, sin EPA, 2021 sem. 1-8)": [
+      {
+        "executionId": "e794c1a6-37e1-47b4-a50b-b4e7f4097d68",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027460745
+      },
+      {
+        "executionId": "c064f045-ce44-4f77-84f4-64a01e085782",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027628403
+      },
+      {
+        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027855366
+      },
+      {
+        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
+        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
+        "timestamp": 1795027959263
+      }
+    ]
+  }
+}
