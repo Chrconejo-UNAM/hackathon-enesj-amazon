@@ -1,30 +1,19 @@
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
 import { api } from '../api'
 import { useApi } from '../useApi'
+import Cargando from './Cargando'
+import ErrorEstado from './ErrorEstado'
+import Vacio from './Vacio'
 
 /** Barras de n_pases por partido (GET api/partidos). Estados: cargando, vacío, error. */
 export default function GraficaPases() {
   const { estado, datos, error, reintentar } = useApi(() => api.partidos(), [])
 
-  if (estado === 'cargando') {
-    return <div aria-busy="true" className="h-64 animate-pulse rounded bg-gray-200">
-      <span className="sr-only">Cargando…</span>
-    </div>
-  }
+  if (estado === 'cargando') return <Cargando />
   if (estado === 'error') {
-    return (
-      <div role="alert" className="rounded border border-red-300 bg-red-50 p-4">
-        <p className="text-red-800">{error ?? 'Error al cargar los partidos'}</p>
-        <button type="button" onClick={reintentar}
-          className="mt-2 rounded bg-red-700 px-3 py-1 text-white focus:outline-none focus:ring-2 focus:ring-red-400">
-          Reintentar
-        </button>
-      </div>
-    )
+    return <ErrorEstado detail={error ?? 'Error al cargar los partidos'} onReintentar={reintentar} />
   }
-  if (estado === 'vacio' || !datos) {
-    return <p className="rounded border border-gray-300 p-4 text-gray-700">Sin partidos disponibles</p>
-  }
+  if (estado === 'vacio' || !datos) return <Vacio texto="Sin partidos disponibles" />
 
   const filas = datos.map((p) => ({
     nombre: `S${p.semana} ${p.visitante}@${p.local}`,
