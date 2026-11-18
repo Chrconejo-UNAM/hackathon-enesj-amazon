@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { api } from '../api'
 import Cargando from '../components/Cargando'
 import ErrorEstado from '../components/ErrorEstado'
@@ -7,17 +7,22 @@ import Semaforo from '../components/Semaforo'
 import Vacio from '../components/Vacio'
 import { t, tx } from '../i18n'
 import { useAppState } from '../state'
-import type { Cobertura, FiltrosSala, Zona } from '../types'
+import type { Cobertura, FiltrosSala } from '../types'
 import { useApi } from '../useApi'
 import Evidencia from './Evidencia'
 
-const ZONAS = ['todas', 'propia', 'medio', 'roja']
+const ZONAS = [
+  'todas',
+  'corta_izquierda', 'corta_centro', 'corta_derecha',
+  'media_izquierda', 'media_centro', 'media_derecha',
+  'profunda_izquierda', 'profunda_centro', 'profunda_derecha',
+]
 const COBS = ['todas', 'Man', 'Zone']
 const selCls = 'rounded border border-gray-400 bg-white px-2 py-1'
 
 export default function SalaDecisiones() {
   const { lang, bandaLateral } = useAppState()
-  const [f, setF] = useState<FiltrosSala>({ down: 3, yardsToGo: 5, zona: 'todas' as Zona, cobertura: 'todas' })
+  const [f, setF] = useState<FiltrosSala>({ down: 3, yardsToGo: 5, zona: 'todas', cobertura: 'todas' })
   const { down, yardsToGo, zona, cobertura } = f
 
   const rec = useApi(() => api.recomendacion(f), [down, yardsToGo, zona, cobertura])
@@ -46,7 +51,7 @@ export default function SalaDecisiones() {
         </label>
         <label className="flex flex-col text-sm">
           {t(lang, 'ctl.zona')}
-          <select className={selCls} value={zona} onChange={(e) => setF({ ...f, zona: e.target.value as Zona })}>
+          <select className={selCls} value={zona} onChange={(e) => setF({ ...f, zona: e.target.value as FiltrosSala['zona'] })}>
             {ZONAS.map((z) => <option key={z} value={z}>{t(lang, `zona.${z}`)}</option>)}
           </select>
         </label>
@@ -70,12 +75,13 @@ export default function SalaDecisiones() {
         return (
           <>
             <div className="space-y-2 rounded border border-gray-300 p-4">
+              <p className="text-sm text-gray-700">{t(lang, 'sala.yardas_esperadas')}</p>
               <h2 className={bandaLateral ? 'text-4xl font-bold' : 'text-2xl font-bold'}>{tx(d.accion, lang)}</h2>
               <p className={bandaLateral ? 'text-2xl' : ''}>{tx(d.porque, lang)}</p>
               {bandaLateral ? (
                 <div className="text-2xl"><Semaforo confianza={conf} lang={lang} /></div>
               ) : (
-                <EstimacionBadge estimacion={e} unidad="pct" lang={lang} />
+                <EstimacionBadge estimacion={e} unidad="yds" lang={lang} />
               )}
             </div>
 
@@ -91,16 +97,26 @@ export default function SalaDecisiones() {
                 )}
 
                 {d.comparables.length > 0 && (
-                  <ul className="space-y-1">
-                    {d.comparables.map((c, i) => (
-                      <li key={i} className="flex flex-wrap items-center gap-2 rounded border border-gray-200 p-2">
-                        <span className="font-medium">{tx(c.etiqueta, lang)}</span>
-                        <EstimacionBadge estimacion={c.estimacion} unidad="pct" lang={lang} />
-                      </li>
-                    ))}
-                  </ul>
+                  <div>
+                    <h3 className="mb-1 font-semibold">{t(lang, 'sala.comparables')}</h3>
+                    <ul className="space-y-1">
+                      {d.comparables.map((c) => (
+                        <li key={`${c.gameId}-${c.playId}`} className="flex flex-wrap items-center gap-2 rounded border border-gray-200 p-2 text-sm">
+                          <span className="font-medium">{c.equipo} · S{c.semana}</span>
+                          <span>{c.down}&amp;{c.yardsToGo}</span>
+                          <span>{t(lang, `zona.${c.zona}`)}</span>
+                          {c.cobertura && <span>{c.cobertura}</span>}
+                          <span className="font-semibold">{c.playResult} yd</span>
+                          {c.sep_elegido != null && c.sep_mas_abierto != null && (
+                            <span className="text-gray-700">
+                              {t(lang, 'vivo.elegido')} {c.sep_elegido.toFixed(1)} / {t(lang, 'vivo.abierto')} {c.sep_mas_abierto.toFixed(1)} yd
+                            </span>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
-
                 <Evidencia filtros={f} lang={lang} />
               </>
             )}
@@ -112,3 +128,4 @@ export default function SalaDecisiones() {
     </section>
   )
 }
+

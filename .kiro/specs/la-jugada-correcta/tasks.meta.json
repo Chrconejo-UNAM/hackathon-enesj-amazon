@@ -1,168 +1,721 @@
 {
   "pbtResults": {},
   "executionHistory": {
-    "1. [FRONTEND] Esqueleto del dashboard (paralelo a 7)": [
+    "1.1 [BACKEND] Paso 1 (parte A): `main.py` con `cargar_env()`, `/health` y servicio de `dashboard/dist` **[SECUENCIAL: primera tarea del backend]**": [
       {
-        "executionId": "c8853e69-9714-45a9-9d23-e1a5aee6604d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795025743770
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886121
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025892053
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025960303
       }
     ],
-    "1.1 [FRONTEND] Verificar lo ya creado: `types.ts`, `api.ts`, `mocks/index.ts`, `useApi.ts`, `vite-env.d.ts`, `vite.config.ts` y Tailwind 3 (en paralelo con 1.2)": [
+    "1.2 [BACKEND] Paso 1 (parte B): modelos Pydantic, `mock.py` y endpoints MOCK conformes al contrato **[SECUENCIAL: después de 1.1]**": [
       {
-        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795026659255
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886175
       },
       {
-        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795026768677
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025964530
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026212553
       }
     ],
-    "1.4 [FRONTEND] Gráfica Recharts de barras `n_pases` por partido en `App.tsx` usando `useApi` + `api.ts` (`GET api/partidos`) con Cargando, Vacío y Error": [
+    "1.3 [FRONTEND] Crear el proyecto `dashboard/` con Vite, React, TypeScript y Tailwind **[PARALELO: con 1.1 y 1.2]**": [
       {
-        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795026768963
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886235
       },
       {
-        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027041734
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025892674
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025959700
       }
     ],
-    "3.3 [FRONTEND] Mocks de las pantallas, en `mocks/` (ver sección \"Mocks para el frontend\"): `resumen`, `recomendacion`, `regret_equipos`, `evidencia`, `explicacion`, con interruptor por endpoint": [
+    "1.4 [FRONTEND] Tipos TypeScript del contrato y cliente de API **[PARALELO: con 1.2; usa la forma del contrato y de los datos mock]**": [
       {
-        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027042051
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886271
       },
       {
-        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027259620
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025965085
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026212423
       }
     ],
-    "3.4 [FRONTEND] Componentes base: `Semaforo` (ícono + texto \"Confiable / Con reservas / No concluyente\"), `EstimacionBadge` (valor, IC95 %, n y \"aún no es concluyente\" si n<30), `TarjetaResumen`, `Cargando` (`aria-busy`), `Vacio`, `ErrorEstado` (con Reintentar)": [
+    "1.5 [BACKEND] Paso 1 (parte C): carga mínima real de `games.csv` y `plays.csv` para `/api/partidos` con datos reales **[SECUENCIAL: después de 1.2]**": [
       {
-        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027042723
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886307
       },
       {
-        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027262062
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026216018
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026291230
       }
     ],
-    "3.5 [FRONTEND] `state.tsx` (contexto en memoria: idioma, banda lateral, partido, n actual, panel IA; sin `localStorage`) y navegación de 3 pestañas en `App.tsx` (Inicio, Sala de Decisiones, Tablero de Arrepentimiento)": [
+    "1.6 [FRONTEND] Primera gráfica real: pases por partido (Recharts) con `/api/partidos` **[SECUENCIAL: después de 1.4 y 1.5]**": [
       {
-        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027262398
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886343
       },
       {
-        "executionId": "c064f045-ce44-4f77-84f4-64a01e085782",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027622692
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026294318
       },
       {
-        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027852533
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026410031
       }
     ],
-    "4.6 [FRONTEND] Mocks del modo en vivo: `partidos`, `jugada` (12 jugadas de un partido), `acumulado` por `hasta` y `alertas`": [
+    "1.7 [FRONTEND] Generar `dashboard/dist` y verificar que FastAPI lo sirve en la misma URL y puerto **[SECUENCIAL: después de 1.6 y 1.1]**": [
       {
-        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027269792
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886374
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026415359
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026526649
       }
     ],
-    "5.1 [FRONTEND] `i18n.ts` (diccionario ES/EN, helper `t()`, respaldo ES si falta clave) y botón único ES/EN; textos del backend por campo `es`/`en`": [
+    "1.8 [BACKEND] Pruebas de humo con httpx: `/health` y 503 mientras carga **[PARALELO: con 1.5 y 1.6]**": [
       {
-        "executionId": "260ae70f-4442-4cfa-8f61-04065bfe9f0d",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027270207
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886414
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026216105
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026290462
       }
     ],
-    "3.6 [FRONTEND] Pantalla Inicio (`screens/Inicio.tsx`): `titulo` como título de pantalla, `TarjetaResumen` con `regret_liga` y \"2021 sem. 1-8\", `pct_objetivo_inferido`, estados Cargando/Error/Reintentar mostrando `detail`": [
+    "2. Checkpoint de Fase 1: esqueleto end-to-end": [
       {
-        "executionId": "e794c1a6-37e1-47b4-a50b-b4e7f4097d68",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027458008
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886453
       },
       {
-        "executionId": "c064f045-ce44-4f77-84f4-64a01e085782",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027624229
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026550765
       },
       {
-        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027960720
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026622900
       }
     ],
-    "3.7 [FRONTEND] Sala de Decisiones (`screens/SalaDecisiones.tsx`): controles down 1-4, yardsToGo 1-20, zona, cobertura; `accion` como título, `porque`, Semáforo y EstimacionBadge; llamadas a `api/recomendacion` al cambiar un control": [
+    "3.1 [BACKEND] Paso 2 (parte A): carga en memoria con hilos, `usecols` y frames de eventos **[SECUENCIAL: después de 1.5]**": [
       {
-        "executionId": "e794c1a6-37e1-47b4-a50b-b4e7f4097d68",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027458317
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886494
       },
       {
-        "executionId": "c064f045-ce44-4f77-84f4-64a01e085782",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027625627
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026294654
       },
       {
-        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027961690
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026409221
       }
     ],
-    "3.9 [FRONTEND] Tablero de Arrepentimiento (`screens/TableroRegret.tsx`): ranking descendente, filtro de zona (`todas`, `propia`, `medio`, `roja`), filas con equipo, valor, IC95 %, n y Semáforo, marca de no concluyente, título = equipo con mayor Regret concluyente": [
+    "3.2 [BACKEND] Paso 2 (parte B): limpieza, features por jugada y unión con plays, games, players y pff **[SECUENCIAL: después de 3.1]**": [
       {
-        "executionId": "e794c1a6-37e1-47b4-a50b-b4e7f4097d68",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027459511
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886530
       },
       {
-        "executionId": "c064f045-ce44-4f77-84f4-64a01e085782",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027627496
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026415460
       },
       {
-        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027854493
-      },
-      {
-        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027959027
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026528423
       }
     ],
-    "7.2 [FRONTEND + BACKEND] `README.md` en la raíz: cómo correr dev (Vite + Uvicorn) y build, variables `.env` (sin llaves), supuestos y limitaciones (proxy de separación, receptor inferido, sin EPA, 2021 sem. 1-8)": [
+    "3.3 [BACKEND] Paso 2 (parte C): inferencia de receptor y porcentaje inferido **[SECUENCIAL: después de 3.2]**": [
       {
-        "executionId": "e794c1a6-37e1-47b4-a50b-b4e7f4097d68",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027460745
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886595
       },
       {
-        "executionId": "c064f045-ce44-4f77-84f4-64a01e085782",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027628403
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026627116
       },
       {
-        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027855366
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026748080
+      }
+    ],
+    "3.4 [BACKEND] Paso 3 (parte A): `zonas.py` y `separacion.py` (separación, receptor más abierto, regret por jugada) **[SECUENCIAL: después de 3.2]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886639
       },
       {
-        "executionId": "cb9d0970-4c07-4964-bc54-1e0455e44177",
-        "chatSessionId": "sess_19788088-9b09-49d8-b447-b35df926f41f",
-        "timestamp": 1795027959263
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026627378
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026748180
+      }
+    ],
+    "3.5 [BACKEND] Paso 3 (parte B): `estimacion.py` con bootstrap reproducible y semáforo **[PARALELO: con 3.1 a 3.4; no depende de datos]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886690
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026295714
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026408465
+      }
+    ],
+    "3.6 [BACKEND] Pruebas pytest de `estimacion.py`: semáforo en límites y bootstrap reproducible **[SECUENCIAL: después de 3.5]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886740
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026415721
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026527699
+      }
+    ],
+    "3.7 [BACKEND] Pruebas pytest de receptor, zonas y regret **[SECUENCIAL: después de 3.3 y 3.4]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886786
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026758634
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026881842
+      }
+    ],
+    "3.8 [BACKEND] Paso 3 (parte C): validación Pydantic de parámetros con 422 `parametros_invalidos` y su prueba **[PARALELO: con 3.1 a 3.5; solo toca `schemas.py`, `api.py` y un archivo de prueba nuevo]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886833
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026296370
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026410797
+      }
+    ],
+    "4. Checkpoint de Fase 2: núcleo analítico verificado": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886879
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026887891
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026957575
+      }
+    ],
+    "5.1 [FRONTEND] Layout, navegación entre las 5 pantallas y componentes base **[PARALELO: con las tareas 3.x del backend; usa datos mock]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886919
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026550824
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026622086
+      }
+    ],
+    "5.2 [BACKEND] Paso 4 (parte A): `comparables.py` y `GET /api/recomendacion` real con estados vacío y error **[SECUENCIAL: después de 3.2, 3.4 y 3.5]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025886962
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026962717
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027210219
+      }
+    ],
+    "5.3 [BACKEND] Paso 4 (parte B): `GET /api/evidencia` real **[SECUENCIAL: después de 5.2]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887001
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027214775
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027307603
+      }
+    ],
+    "5.4 [BACKEND] Paso 4 (parte C): `regret.py` y `GET /api/resumen` real **[SECUENCIAL: después de 5.3]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887040
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027311038
+      },
+      {
+        "executionId": "760e65ed-6398-43c8-b714-cc5dd22741c8",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027465275
+      },
+      {
+        "executionId": "760e65ed-6398-43c8-b714-cc5dd22741c8",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027497709
+      }
+    ],
+    "5.5 [FRONTEND] Pantalla Inicio **[PARALELO: usa mock hasta que 5.4 esté lista]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887089
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026628210
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026748652
+      }
+    ],
+    "5.6 [FRONTEND] Pantalla Sala de Decisiones **[PARALELO: usa mock hasta que 5.2 esté lista]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887139
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026629270
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026749462
+      }
+    ],
+    "5.7 [FRONTEND] Pantalla Evidencia con gráficas Recharts **[PARALELO: usa mock hasta que 5.3 esté lista]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887201
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026630067
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026750327
+      }
+    ],
+    "5.8 [FRONTEND] Sección \"Limitaciones\" **[PARALELO: independiente]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887242
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026758570
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026882722
+      }
+    ],
+    "5.9 [BACKEND] Pruebas de forma del contrato contra los modelos Pydantic, en mock y con datos reales **[SECUENCIAL: después de 5.4]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887291
+      },
+      {
+        "executionId": "760e65ed-6398-43c8-b714-cc5dd22741c8",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027502435
+      },
+      {
+        "executionId": "f5868477-2d68-4a97-9772-8fd21d77a696",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027528776
+      },
+      {
+        "executionId": "8fd120f3-ed0d-4a3f-89ef-1f45ec6ef249",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027609196
+      }
+    ],
+    "6. Checkpoint de Fase 3: recomendación, evidencia e inicio con datos reales": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887336
+      }
+    ],
+    "7.1 [BACKEND] Paso 4 (parte D): `partido.py`, `GET /api/partidos` completo y `GET /api/partido/{gameId}/jugada/{n}` **[SECUENCIAL: después de 5.4]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887378
+      },
+      {
+        "executionId": "760e65ed-6398-43c8-b714-cc5dd22741c8",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027501447
+      },
+      {
+        "executionId": "f5868477-2d68-4a97-9772-8fd21d77a696",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027527584
+      },
+      {
+        "executionId": "741c8f3a-8ca8-4f8f-a7ae-03b93eb30639",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027762262
+      },
+      {
+        "executionId": "741c8f3a-8ca8-4f8f-a7ae-03b93eb30639",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027848998
+      }
+    ],
+    "7.2 [BACKEND] Paso 4 (parte E): `GET /api/partido/{gameId}/acumulado?hasta=n` con corte temporal **[SECUENCIAL: después de 7.1]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887422
+      },
+      {
+        "executionId": "741c8f3a-8ca8-4f8f-a7ae-03b93eb30639",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027758212
+      },
+      {
+        "executionId": "741c8f3a-8ca8-4f8f-a7ae-03b93eb30639",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027849486
+      }
+    ],
+    "7.3 [BACKEND] Paso 4 (parte F): `GET /api/regret/equipos?zona=` real **[SECUENCIAL: después de 7.2]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887463
+      },
+      {
+        "executionId": "741c8f3a-8ca8-4f8f-a7ae-03b93eb30639",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027758379
+      },
+      {
+        "executionId": "741c8f3a-8ca8-4f8f-a7ae-03b93eb30639",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027850302
+      }
+    ],
+    "7.4 [BACKEND] Paso 4 (parte G): `alertas.py` y `GET /api/partido/{gameId}/alertas?hasta=n` **[SECUENCIAL: después de 7.3]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887507
+      },
+      {
+        "executionId": "741c8f3a-8ca8-4f8f-a7ae-03b93eb30639",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027758482
+      },
+      {
+        "executionId": "741c8f3a-8ca8-4f8f-a7ae-03b93eb30639",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027851119
+      }
+    ],
+    "7.5 [BACKEND] Pruebas: corte temporal, alertas, 404 y orden del ranking **[SECUENCIAL: después de 7.4]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887554
+      },
+      {
+        "executionId": "741c8f3a-8ca8-4f8f-a7ae-03b93eb30639",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027855023
+      },
+      {
+        "executionId": "741c8f3a-8ca8-4f8f-a7ae-03b93eb30639",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795028139645
+      }
+    ],
+    "7.6 [FRONTEND] Tablero de Arrepentimiento **[PARALELO: usa mock; real cuando 7.3 esté lista]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887598
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026887984
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026958364
+      }
+    ],
+    "7.7 [FRONTEND] Modo en Vivo: selector de partido, jugada n y control de avance **[PARALELO: usa mock; real cuando 7.1 esté lista]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887668
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026888532
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026959267
+      }
+    ],
+    "7.8 [FRONTEND] Regret acumulado y panel de alertas en Modo en Vivo **[SECUENCIAL: después de 7.7]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887709
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026963251
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027211299
+      }
+    ],
+    "8. Checkpoint de Fase 4: Regret, modo en vivo y alertas": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887755
+      }
+    ],
+    "9.1 [FRONTEND] Pulido móvil, accesibilidad y revisión de rutas relativas **[SECUENCIAL: después de 7.8]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887808
+      },
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027312119
+      },
+      {
+        "executionId": "760e65ed-6398-43c8-b714-cc5dd22741c8",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027460482
+      }
+    ],
+    "11.1 [BACKEND] README: ejecución, contrato, limitaciones y nota de yardas esperadas **[SECUENCIAL: después de la última tarea de código del backend]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887853
+      }
+    ],
+    "11.2 [FRONTEND] README: sección del dashboard (instalar, desarrollar, construir) **[SECUENCIAL: después de 11.1]**": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887896
+      }
+    ],
+    "12. Checkpoint final": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795025887939
+      },
+      {
+        "executionId": "057b2b19-a1b9-439b-8c8f-32ca723b9c79",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795028786093
+      },
+      {
+        "executionId": "82c5ed02-4f4e-453c-afc1-f4c2930699f7",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795029131673
+      },
+      {
+        "executionId": "82c5ed02-4f4e-453c-afc1-f4c2930699f7",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795029212718
+      }
+    ],
+    "1. Fase 1: Esqueleto end-to-end (health, una gráfica con datos reales, build servido por FastAPI)": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026526709
+      }
+    ],
+    "3. Fase 2: Núcleo analítico y pytest (backend)": [
+      {
+        "executionId": "fd68530d-b3c9-44ab-923a-380dff5e2139",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795026881906
+      }
+    ],
+    "9. Fase 5: Pulido móvil, ES/EN y banda lateral": [
+      {
+        "executionId": "760e65ed-6398-43c8-b714-cc5dd22741c8",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027460612
+      }
+    ],
+    "5. Fase 3: Pantallas (frontend) y endpoints reales de recomendación, evidencia y resumen": [
+      {
+        "executionId": "8fd120f3-ed0d-4a3f-89ef-1f45ec6ef249",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795027609278
+      }
+    ],
+    "7. Fase 4: Regret Index, modo en vivo y alertas": [
+      {
+        "executionId": "741c8f3a-8ca8-4f8f-a7ae-03b93eb30639",
+        "chatSessionId": "sess_dc07ca4e-4320-49c9-b0cf-4beccc332002",
+        "timestamp": 1795028139730
       }
     ]
   }
