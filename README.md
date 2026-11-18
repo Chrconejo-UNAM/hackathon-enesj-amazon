@@ -159,3 +159,9 @@ Python 3.12.12 · FastAPI 0.115.14 · Uvicorn 0.34.3 · Pydantic 2.11.7 · panda
 
 - **Christian Alexis Ramírez Conejo** (ENES Juriquilla, UNAM): backend y datos (`backend/`).
 - **Marianne**: frontend (`dashboard/`).
+
+## Pendientes
+- **Datos de ejemplo:** el frontend usa mocks mientras se integra el backend. Para pasar un endpoint a datos reales, ponerlo en `false` en `MOCK_ENDPOINTS` (`dashboard/src/api.ts`); `VITE_USE_MOCKS=false` los apaga todos.
+- **Modo Partido en Vivo:** los mocks (`jugada`, `acumulado`, `alertas`) existen, falta la pantalla.
+- **Panel de IA:** alertas proactivas, 4 preguntas sugeridas y chat (Strands + Bedrock Nova con plantilla de respaldo).
+- **Revisión fina** a 375 px y auditoría de accesibilidad.
