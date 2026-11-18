@@ -1,5 +1,7 @@
 # La Jugada Correcta
 
+**Resumen:** La Jugada Correcta es una app web para coaches de la NFL que responde si el pase fue al receptor más abierto o si había una mejor opción. Usa el tracking de la temporada 2021 (semanas 1-8, 122 partidos) para medir, en el momento del pase, la separación de cada receptor contra su defensor más cercano. El Índice de Arrepentimiento (Target Regret Index) compara esa separación con la del receptor elegido y se agrega por equipo y por zona del campo. Cada estimación muestra n, intervalo bootstrap del 95 % y un semáforo de confianza; con menos de 30 jugadas se marca como no concluyente.
+
 **Una línea:** Le dice a un coach de la NFL qué decisión conviene tomar y por qué, comparando al receptor elegido contra el más abierto en el momento del pase, con n e IC 95 % en cada cifra.
 
 > NFL Big Data Bowl · UNAM 2026 · Equipo ENES Juriquilla
