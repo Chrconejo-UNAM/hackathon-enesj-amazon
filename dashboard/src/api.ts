@@ -4,8 +4,8 @@ import type {
   Explicacion, Jugada, Partido, Recomendacion, Resumen, Zona,
 } from './types'
 import {
-  acumuladoMock, alertas, chatMock, equipos, evidencia, explicacionMock, jugadaMock,
-  partidos, recomendacionMock, resumen,
+  acumuladoMock, alertas, chatMock, equiposMock, escenario, evidencia, evidenciaVacia, explicacionMock, jugadaMock,
+  partidos, recomendacionMock, resumen, resumenAmarillo,
 } from './mocks'
 
 /** Error con la forma del contrato {detail, codigo}. */
@@ -56,10 +56,12 @@ const qs = (p: Record<string, string | number | undefined>) => {
 
 export const api = {
   resumen: (): Promise<Resumen> =>
-    usaMock('resumen') ? espera(resumen) : pedir('api/resumen'),
+    usaMock('resumen')
+      ? escenario() === 'error' ? fallo('Error simulado del servidor', 'ERROR_INTERNO') : espera(escenario() === 'amarillo' ? resumenAmarillo : resumen)
+      : pedir('api/resumen'),
 
   partidos: (): Promise<Partido[]> =>
-    usaMock('partidos') ? espera(partidos) : pedir('api/partidos'),
+    usaMock('partidos') ? espera(escenario() === 'vacio' ? [] : partidos) : pedir('api/partidos'),
 
   jugada: (gameId: number, n: number): Promise<Jugada> => {
     if (!usaMock('jugada')) return pedir(`api/partido/${gameId}/jugada/${n}`)
@@ -76,17 +78,18 @@ export const api = {
       : pedir(`api/partido/${gameId}/alertas${qs({ hasta })}`),
 
   recomendacion: (f: { down: number; yardsToGo: number; zona: Zona; cobertura: Cobertura }): Promise<Recomendacion> =>
-    usaMock('recomendacion') ? espera(recomendacionMock(f)) : pedir(`api/recomendacion${qs(f)}`),
+    usaMock('recomendacion')
+      ? escenario() === 'error' ? fallo('Error simulado del servidor', 'ERROR_INTERNO') : espera(recomendacionMock(f))
+      : pedir(`api/recomendacion${qs(f)}`),
 
-  // Mock de error: zona=roja devuelve 500 simulado.
   regretEquipos: (zona?: Zona): Promise<EquipoRegret[]> => {
     if (!usaMock('regretEquipos')) return pedir(`api/regret/equipos${qs({ zona })}`)
-    if (zona === 'roja') return fallo('Error simulado del servidor', 'ERROR_INTERNO')
-    return espera([...equipos].sort((a, b) => b.estimacion.valor - a.estimacion.valor))
+    if (escenario() === 'error') return fallo('Error simulado del servidor', 'ERROR_INTERNO')
+    return espera(equiposMock(zona))
   },
 
   evidencia: (f: { down: number; yardsToGo: number; zona: Zona }): Promise<Evidencia> =>
-    usaMock('evidencia') ? espera(evidencia) : pedir(`api/evidencia${qs(f)}`),
+    usaMock('evidencia') ? espera(escenario() === 'vacio' ? evidenciaVacia : evidencia) : pedir(`api/evidencia${qs(f)}`),
 
   explicacion: (f: { down: number; yardsToGo: number; zona: Zona; cobertura: Cobertura }): Promise<Explicacion> =>
     usaMock('explicacion') ? espera(explicacionMock(f.down % 2 === 0)) : pedir(`api/explicacion${qs(f)}`),

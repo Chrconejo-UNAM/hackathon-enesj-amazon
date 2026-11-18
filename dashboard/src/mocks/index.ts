@@ -9,6 +9,29 @@ export function est(valor: number, n: number, mitad = 0.4, confianza?: Confianza
   return { valor, ic95: [+(valor - mitad).toFixed(2), +(valor + mitad).toFixed(2)], n, concluyente: n >= 30, confianza: c }
 }
 
+/** Escenario forzado por URL: ?mock=error | amarillo | vacio (solo mocks, para probar estados). */
+export const escenario = (): string =>
+  typeof window === 'undefined' ? '' : new URLSearchParams(window.location.search).get('mock') ?? ''
+
+export const resumenAmarillo: Resumen = {
+  titulo: { es: 'Los QB dejan 1.3 yardas de separación sobre la mesa (con reservas)', en: 'QBs leave 1.3 yards of separation on the table (with caveats)' },
+  linea: { es: 'Muestra reducida de 2021', en: 'Small 2021 sample' },
+  regret_liga: est(1.3, 60, 0.9),
+  calidad_datos: { pct_objetivo_inferido: 18.5 },
+}
+
+export const evidenciaVacia: Evidencia = { exito_por_zona: [], exito_por_separacion: [], exito_por_cobertura: [] }
+
+const FZ: Record<string, number> = { propia: 0.8, medio: 1, roja: 1.3 }
+/** Equipos filtrados por zona (omitida = todas), orden descendente por valor. */
+export function equiposMock(zona?: Zona): EquipoRegret[] {
+  const f = zona ? FZ[zona] : 1
+  const div = zona ? 3 : 1
+  return equipos
+    .map((e) => ({ equipo: e.equipo, estimacion: est(+(e.estimacion.valor * f).toFixed(2), Math.max(5, Math.round(e.estimacion.n / div)), 0.3) }))
+    .sort((a, b) => b.estimacion.valor - a.estimacion.valor)
+}
+
 export const resumen: Resumen = {
   titulo: {
     es: 'Los QB tiran en promedio 1.3 yardas de separaciÃ³n por debajo del mejor receptor',
